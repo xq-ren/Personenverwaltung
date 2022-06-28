@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Personenverwaltung" target="17" />
+      <module name="Personenverwaltung" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
