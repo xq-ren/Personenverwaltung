@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<h1>Add a new Person</h1>
+
+<form action="#" th:action="@{/new}" th:object="${person}" method="post">
+    <input id="firstname" type="text" name="Firstname" th:field="*{firstname}"/>
+    <input id="lastname" type="text" name="Lastname" th:field="*{lastname}"/>
+    <input id="email" type="email" name="E-Mail" th:field="*{email}"/>
+    <input id="birthdate" type="date" name="Birthdate" th:field="*{birthdate}"/>
+    <input id="size250" type="radio" name="size" th:field="*{gender}" th:value="m"/>
+    <label for="size250">250mm</label>
+    <input id="size350" type="radio" name="size" th:field="*{gender}" th:value="m"/>
+    <label for="size350">250mm</label>
+    <input id="size320" type="radio" name="size" th:field="*{gender}" th:value="f"/>
+    <label for="size320">250mm</label>
+    <input type="submit"/>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script th:src="@{/bootstrap-4.1.3/js/bootstrap.min.js}"></script>
+</body>
+</html>
